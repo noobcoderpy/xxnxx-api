@@ -29,12 +29,12 @@ export const channel = async (url) => {
     video.map((v, i) => {
         data.videos.trending.push({
             url: $(v).find('a').attr('href'),
-            title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, '').replace(/ /g, ''),
+            title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
             preview: $(v).find('a').attr('data-previewvideo'),
             img: $(v).find('img').attr('src'),
-            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/ /g, '')
+            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/\n/g, ''),
+            view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, '').replace(/\n/g, ''),
+            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/\n/g, '')
         })
 
 
@@ -46,12 +46,12 @@ export const channel = async (url) => {
     video1.map((v, i) => {
         data.videos.Newest.push({
             url: $1(v).find('a').attr('href'),
-            title: $1(v).find('a.video-thumb-info__name').text().replace(/\n/g, '').replace(/ /g, ''),
+            title: $1(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
             preview: $1(v).find('a').attr('data-previewvideo'),
             img: $1(v).find('img').attr('src'),
-            duration: $1(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            view: $1(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            rating: $1(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/ /g, '')
+            duration: $1(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/\n/g, ''),
+            view: $1(v).find('.views').children('span').text().replace(/\n/g, '').replace(/\n/g, ''),
+            rating: $1(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/\n/g, '')
         })
 
 
@@ -65,10 +65,10 @@ export const channel = async (url) => {
             url: $2(v).find('a').attr('href'),
             preview: $2(v).find('a').attr('data-previewvideo'),
             img: $2(v).find('img').attr('src'),
-            title: $2(v).find('a.video-thumb-info__name').text().replace(/\n/g, '').replace(/ /g, ''),
-            duration: $2(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            view: $2(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            rating: $2(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/ /g, '')
+            title: $2(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
+            duration: $2(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/\n/g, ''),
+            view: $2(v).find('.views').children('span').text().replace(/\n/g, '').replace(/\n/g, ''),
+            rating: $2(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/\n/g, '')
         })
 
 
@@ -85,12 +85,12 @@ export const search = async (name) => {
     video.map((v, i) => {
         data.push({
             url: $(v).find('a').attr('href'),
-            title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, '').replace(/ /g, ''),
+            title: $(v).find('a.video-thumb-info__name').text(),
             preview: $(v).find('a').attr('data-previewvideo'),
             img: $(v).find('img').attr('src'),
-            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
+            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, ''),
             view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/ /g, '')
+            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '')
         })
 
 
@@ -108,12 +108,12 @@ export const trending = async () => {
     video.map((v, i) => {
         data.push({
             url: $(v).find('a').attr('href'),
-            title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, '').replace(/ /g, ''),
+            title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
             preview: $(v).find('a').attr('data-previewvideo'),
             img: $(v).find('img').attr('src'),
-            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
+            duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, ''),
             view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '').replace(/ /g, '')
+            rating: $(v).find('.rating').children('span').text().replace(/\n/g, '')
         })
 
 
