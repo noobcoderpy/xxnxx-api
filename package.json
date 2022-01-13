@@ -1,18 +1,25 @@
 {
-  "name": "backend",
+  "name": "template-typescript-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "start":"node ."
   },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+ 
   "dependencies": {
-    "axois": "^0.0.1-security",
+    "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "jsdom": "^19.0.0",
+    "node-fetch": "^3.1.0",
+    "youtube-dl-exec": "^2.0.2",
+    "youtube-dl-wrap": "^2.1.1"
   }
 }
