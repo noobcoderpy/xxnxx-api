@@ -1,5 +1,5 @@
 import express from "express";
-import { channel, TopList, trending, video } from "./controller/list.js"
+import { channel, TopList, trending, video } from "./controller.js"
 const app = express()
 app.get('/top/list/pornstars/:nam?', (req, res) => {
     TopList(req.params.nam).then((r) => {
