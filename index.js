@@ -1,5 +1,5 @@
 import express from "express";
-import { channel, TopList, trending, video } from "./contoroller.js"
+import { channel, search, TopList, trending, video } from "./contoroller.js"
 const app = express()
 app.get('/top/list/pornstars/:nam?', (req, res) => {
     TopList(req.params.nam).then((r) => {
@@ -15,6 +15,11 @@ app.get('/channel/:name', (req, res) => {
 })
 app.get('/video', (req, res) => {
     video(req.query.url).then((r) => {
+        res.json(r)
+    })
+})
+app.get('/serch/:name', (req, res) => {
+    search(req.params.name).then((r) => {
         res.json(r)
     })
 })
