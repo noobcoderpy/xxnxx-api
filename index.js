@@ -1,6 +1,8 @@
 import express from "express";
+import cors from "cors"
 import { channel, search, TopList, trending, video } from "./contoroller.js"
 const app = express()
+app.use(cors())
 app.get('/top/list/pornstars/:nam?', (req, res) => {
     TopList(req.params.nam).then((r) => {
         res.json(
