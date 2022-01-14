@@ -123,7 +123,7 @@ export const trending = async () => {
     return data
 }
 export const video = async (url) => {
-    const res = await (await fetch(url).text())
+    const res = await (await fetch(url)).text()
     const $ = cheerio.load(res)
     const video = $('.thumb-list__item').toArray()
     const data = { video: '', realted: [] }
