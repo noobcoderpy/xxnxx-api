@@ -123,9 +123,9 @@ export const trending = async () => {
     return data
 }
 export const video = async (url) => {
-    const res = await (await fetch(url)).text()
-    const $ = cheerio.load(res)
-    const video = $('.thumb-list__item').toArray()
+//     const res = await (await fetch(url)).text()
+//     const $ = cheerio.load(res)
+//     const video = $('.thumb-list__item').toArray()
    
     return await youtubedl(url, {
         dumpSingleJson: true,
@@ -135,24 +135,26 @@ export const video = async (url) => {
         preferFreeFormats: true,
         youtubeSkipDashManifest: true,
         referer: 'https://xhamster3.com/'
-    }).then((r) => {
-        const data = { video: r, realted: [] }
-        video.map((v, i) => {
-            data.realted.push({
-                url: $(v).find('a').attr('href'),
-                title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
-                preview: $(v).find('a').attr('data-previewvideo'),
-                img: $(v).find('img').attr('src'),
-                duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, ''),
-                view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
-                rating: $(v).find('.rating').children('span').text().replace(/\n/g, '')
-            })
-    
-    
-    
-    
-        })
-        return data
     })
+        
+//         .then((r) => {
+//         const data = { video: r, realted: [] }
+//         video.map((v, i) => {
+//             data.realted.push({
+//                 url: $(v).find('a').attr('href'),
+//                 title: $(v).find('a.video-thumb-info__name').text().replace(/\n/g, ''),
+//                 preview: $(v).find('a').attr('data-previewvideo'),
+//                 img: $(v).find('img').attr('src'),
+//                 duration: $(v).find('.thumb-image-container__duration').children('span').text().replace(/\n/g, ''),
+//                 view: $(v).find('.views').children('span').text().replace(/\n/g, '').replace(/ /g, ''),
+//                 rating: $(v).find('.rating').children('span').text().replace(/\n/g, '')
+//             })
+    
+    
+    
+    
+//         })
+//         return data
+//     })
     
 }
