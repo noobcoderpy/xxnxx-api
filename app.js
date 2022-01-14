@@ -30,6 +30,6 @@ app.get('/', (_, res) => {
         res.json(r)
     })
 })
-app.listen(8083, () => {
+app.listen(process.env.PORT, () => {
     console.log('ok');
 })
